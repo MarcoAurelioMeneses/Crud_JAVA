@@ -1,4 +1,4 @@
-package br.com.marco.springApi.medico;
+package br.com.marco.springApi.domain.medico;
 
 public enum Especialidade {
     ORTOPEDIA,

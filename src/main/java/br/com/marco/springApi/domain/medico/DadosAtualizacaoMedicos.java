@@ -1,6 +1,6 @@
-package br.com.marco.springApi.medico;
+package br.com.marco.springApi.domain.medico;
 
-import br.com.marco.springApi.endereco.DadosEndereco;
+import br.com.marco.springApi.domain.endereco.DadosEndereco;
 import jakarta.validation.constraints.NotNull;
 
 public record DadosAtualizacaoMedicos(

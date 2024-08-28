@@ -1,6 +1,6 @@
-package br.com.marco.springApi.medico;
+package br.com.marco.springApi.domain.medico;
 
-import br.com.marco.springApi.endereco.Endereco;
+import br.com.marco.springApi.domain.endereco.Endereco;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -16,16 +16,13 @@ public class Medico {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String nome;
     private String email;
     private String telefone;
     private String crm;
     private Boolean ativo;
-
     @Enumerated(EnumType.STRING)
     private Especialidade especialidade;
-
     @Embedded
     private Endereco endereco;
 
@@ -95,6 +92,7 @@ public class Medico {
         this.ativo = ativo;
     }
 
+
     public void atualizarInformacoes(DadosAtualizacaoMedicos dados) {
         if (dados.nome() != null){
             this.nome = dados.nome();
@@ -108,6 +106,10 @@ public class Medico {
     }
 
     public void excluir() {
-        this.ativo = false;
+
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
     }
 }

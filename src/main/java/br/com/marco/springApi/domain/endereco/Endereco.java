@@ -1,4 +1,4 @@
-package br.com.marco.springApi.endereco;
+package br.com.marco.springApi.domain.endereco;
 
 
 import jakarta.persistence.Embeddable;
